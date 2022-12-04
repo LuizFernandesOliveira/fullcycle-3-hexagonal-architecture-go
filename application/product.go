@@ -10,7 +10,7 @@ type ProductInterface interface {
 	IsValid() (bool, error)
 	Enable() error
 	Disable() error
-	GetId() string
+	GetID() string
 	GetName() string
 	GetStatus() string
 	GetPrice() float64
@@ -96,12 +96,12 @@ func (p *Product) Disable() error {
 	return errors.New("the price must be zero in order to have the product disabled")
 }
 
-func (p *Product) GetId() string {
+func (p *Product) GetID() string {
 	return p.ID
 }
 
 func (p *Product) GetName() string {
-	return p.Status
+	return p.Name
 }
 
 func (p *Product) GetStatus() string {
